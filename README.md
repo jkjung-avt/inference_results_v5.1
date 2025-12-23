@@ -1,4 +1,4 @@
-# MLPerf™ Inference v5.1 results
-This repository contains the results and code for the MLPerf™ Inference v5.1 benchmark.
+# MLPerf® Inference v5.1 results
+This repository contains the results and code for the MLPerf® Inference v5.1 benchmark.
 
 For benchmark code and rules please see the [main MLPerf Inference repository](https://github.com/mlcommons/inference).

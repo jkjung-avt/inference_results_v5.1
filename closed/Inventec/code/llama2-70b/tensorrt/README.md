@@ -54,7 +54,7 @@ Enter the mlperf container for the rest of the steps.
    ```bash
    cd ${HOME}/inference_results_v5.1/closed/Inventec
    ln -sf ${MLPERF_SCRATCH_PATH}/data build/
-   ln -sf ${MLPERF_SCRATCH_PATH}/model build/
+   ln -sf ${MLPERF_SCRATCH_PATH}/models build/
    make prebuild
    ```
 
@@ -74,12 +74,15 @@ Make sure after the steps above, you have:
 
 ## Build and run the benchmarks
 
-Please follow the steps below in the mlperf container.  Note that the quantization is done in the generate_engines step, so you don't need to do it separately.
+Please follow the steps below in the mlperf container.  The build step would build code for all mlperf inference tasks, including code for other benchmarks.  The generate_engines step would take care of quantization/calibration of the model.  And the run_harness step would validate the optimized model could achieve the required accuracy threshold.
 
    ```bash
    make build
 
    make generate_engines SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy"
+
+   mkdir -p build/preprocessed_data/open_orca/
+   cp build/data/llama2-70b/open_orca_gpt4_tokenized_llama.sampled_24576.pkl build/preprocessed_data/open_orca/
    make run_harness SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy --test_mode=AccuracyOnly"
    ```
 
@@ -92,7 +95,21 @@ For a general rule of thumb, GPUs with:
 You should expect to get the following results (the detailed number might be different):
 
    ```
-      accuracy: [PASSED] ROUGE1: 44.495 (Threshold=43.836) | [PASSED] ROUGE2: 22.089 (Threshold=21.689) | [PASSED] ROUGEL: 28.694 (Threshold=28.222) | [PASSED] TOKENS_PER_SAMPLE: 293.100 (Threshold=263.970)
+   Results
+   
+   {'rouge1': 44.7482, 'rouge2': 22.3577, 'rougeL': 29.1381, 'rougeLsum': 42.2582, 'gen_len': 26547811, 'gen_num': 24576, 'gen_tok_len': 6717768, 'tokens_per_sample': 273.3}
+   
+   ======================== Result summaries: ========================
+   
+   Offline Scenario:
+   +-------------------------------+---------------+-----------+------------------+-------------------+------------------+----------------------+
+   | System Name                   | Benchmark     | Setting   | All Acc. Pass?   | Metric Name       |   Measured Value | Threshold            |
+   +===============================+===============+===========+==================+===================+==================+======================+
+   | P9000AG7_B200-SXM-180GBx8_TRT | llama2-70b-99 | cp990     | Yes              | ROUGE1            |            44.75 | >=43.98688799999999  |
+   |                               |               |           |                  | ROUGE2            |            22.36 | >=21.814847999999998 |
+   |                               |               |           |                  | ROUGEL            |            29.14 | >=28.330038          |
+   |                               |               |           |                  | TOKENS_PER_SAMPLE |           273.30 | >=265.005            |
+   +-------------------------------+---------------+-----------+------------------+-------------------+------------------+----------------------+
    ```
 
 Finally, run the following command to get the benchmark number.

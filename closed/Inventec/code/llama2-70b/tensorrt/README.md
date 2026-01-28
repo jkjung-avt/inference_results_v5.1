@@ -62,6 +62,8 @@ Run the required data pre-processing:
 
    ```bash
    python3 code/llama2-70b/tensorrt/preprocess_data.py --data_dir build/data/ --preprocessed_data_dir build/preprocessed_data
+   mkdir -p build/preprocessed_data/open_orca/
+   cp build/data/llama2-70b/open_orca_gpt4_tokenized_llama.sampled_24576.pkl build/preprocessed_data/open_orca/
    ```
 
 Make sure after the steps above, you have:
@@ -81,8 +83,6 @@ Please follow the steps below in the mlperf container.  The build step would bui
 
    make generate_engines SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy"
 
-   mkdir -p build/preprocessed_data/open_orca/
-   cp build/data/llama2-70b/open_orca_gpt4_tokenized_llama.sampled_24576.pkl build/preprocessed_data/open_orca/
    make run_harness SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy --test_mode=AccuracyOnly"
    ```
 

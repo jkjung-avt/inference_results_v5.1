@@ -1,0 +1,247 @@
+[2025-08-01 12:19:06,684 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,685 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,688 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,689 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,690 submission_checker.py:1697 INFO] Target latency: None, Latency: 2546591752010, Scenario: Offline
+[2025-08-01 12:19:06,700 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,701 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,704 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,705 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,705 submission_checker.py:1678 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:06,717 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,719 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,725 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,727 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,727 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:06,738 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,740 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,746 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,747 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,748 submission_checker.py:1697 INFO] Target latency: None, Latency: 2665332331877, Scenario: Offline
+[2025-08-01 12:19:06,777 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,781 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,797 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,801 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,801 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:06,830 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,832 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,838 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,840 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,840 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:06,850 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,852 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,858 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,860 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,861 submission_checker.py:1697 INFO] Target latency: None, Latency: 2665332331877, Scenario: Offline
+[2025-08-01 12:19:06,871 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,873 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,879 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,881 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,881 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:06,890 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,891 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,895 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,896 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,896 submission_checker.py:1678 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:06,904 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,905 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,909 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,910 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,910 submission_checker.py:1697 INFO] Target latency: None, Latency: 3285660037371, Scenario: Offline
+[2025-08-01 12:19:06,918 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,919 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,923 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,924 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,924 submission_checker.py:1678 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:06,934 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,936 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,940 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,942 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,942 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:06,951 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,952 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,956 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,958 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,958 submission_checker.py:1697 INFO] Target latency: None, Latency: 673523778978, Scenario: Offline
+[2025-08-01 12:19:06,967 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,968 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,972 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,974 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:06,974 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:07,059 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/rgat/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,102 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/rgat/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,206 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/rgat/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,246 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/rgat/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,255 submission_checker.py:1697 INFO] Target latency: None, Latency: 656327674851, Scenario: Offline
+[2025-08-01 12:19:07,379 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/rgat/Offline/TEST01/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,420 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/rgat/Offline/TEST01/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,429 submission_checker.py:1697 INFO] Target latency: None, Latency: 657838143850, Scenario: Offline
+[2025-08-01 12:19:07,454 submission_checker.py:3144 INFO] Compliance test accuracy check (deterministic mode) in closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/rgat/Offline/TEST01 failed
+[2025-08-01 12:19:07,465 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,465 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,470 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,471 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,471 submission_checker.py:1697 INFO] Target latency: None, Latency: 720228463475, Scenario: Offline
+[2025-08-01 12:19:07,474 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Offline/TEST01/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,476 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Offline/TEST01/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,476 submission_checker.py:1697 INFO] Target latency: None, Latency: 718623931950, Scenario: Offline
+[2025-08-01 12:19:07,480 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Offline/TEST04/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,482 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Offline/TEST04/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,482 submission_checker.py:1697 INFO] Target latency: None, Latency: 697887377093, Scenario: Offline
+[2025-08-01 12:19:07,491 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,492 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,496 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,498 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,498 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 20000000000, Scenario: Server
+[2025-08-01 12:19:07,501 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Server/TEST01/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,502 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Server/TEST01/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,502 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 20000000000, Scenario: Server
+[2025-08-01 12:19:07,506 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Server/TEST04/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,507 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Server/TEST04/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,508 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 20000000000, Scenario: Server
+[2025-08-01 12:19:07,543 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/whisper/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,544 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/whisper/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,547 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/whisper/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,548 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/B200-SXM-180GBx8_TRT/whisper/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,548 submission_checker.py:1697 INFO] Target latency: None, Latency: 597127726770, Scenario: Offline
+[2025-08-01 12:19:07,550 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/whisper/Offline/TEST01/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,555 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/whisper/Offline/TEST01/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,555 submission_checker.py:1697 INFO] Target latency: None, Latency: 613270725826, Scenario: Offline
+[2025-08-01 12:19:07,563 submission_checker.py:3144 INFO] Compliance test accuracy check (deterministic mode) in closed/NVIDIA/compliance/B200-SXM-180GBx8_TRT/whisper/Offline/TEST01 failed
+[2025-08-01 12:19:07,577 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,579 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,585 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,587 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,588 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:07,598 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,600 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,606 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,608 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,609 submission_checker.py:1697 INFO] Target latency: None, Latency: 5227859140638, Scenario: Offline
+[2025-08-01 12:19:07,642 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,644 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,650 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,652 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,652 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:07,672 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,674 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,680 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,682 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,682 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:07,692 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,694 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,699 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,701 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,702 submission_checker.py:1697 INFO] Target latency: None, Latency: 5227859140638, Scenario: Offline
+[2025-08-01 12:19:07,711 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,713 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,719 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,721 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,721 submission_checker.py:1678 INFO] Target latency: 20000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:07,759 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,760 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,763 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,764 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,764 submission_checker.py:1697 INFO] Target latency: None, Latency: 2269049838012, Scenario: Offline
+[2025-08-01 12:19:07,782 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,783 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,787 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,788 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,788 submission_checker.py:1678 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:07,796 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,797 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,801 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,802 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,802 submission_checker.py:1678 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:07,810 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,811 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,815 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,816 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,816 submission_checker.py:1697 INFO] Target latency: None, Latency: 4992968938900, Scenario: Offline
+[2025-08-01 12:19:07,824 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,825 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,829 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,830 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,830 submission_checker.py:1678 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:07,866 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,867 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/deepseek-r1/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,870 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,871 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,871 submission_checker.py:1697 INFO] Target latency: None, Latency: 3162126992249, Scenario: Offline
+[2025-08-01 12:19:07,890 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,891 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/deepseek-r1/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,894 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,895 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/deepseek-r1/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,896 submission_checker.py:1678 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:07,905 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/llama3.1-405b/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,906 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/llama3.1-405b/Offline/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,909 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/llama3.1-405b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,911 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/llama3.1-405b/Offline/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,911 submission_checker.py:1697 INFO] Target latency: None, Latency: 5735358555116, Scenario: Offline
+[2025-08-01 12:19:07,919 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/llama3.1-405b/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,920 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/llama3.1-405b/Server/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,924 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/llama3.1-405b/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,925 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/llama3.1-405b/Server/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:07,925 submission_checker.py:1678 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:08,035 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from open/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_Dynamo/llama3.1-405b/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:08,036 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from open/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_Dynamo/llama3.1-405b/Interactive/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:08,040 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from open/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_Dynamo/llama3.1-405b/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:08,041 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from open/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_Dynamo/llama3.1-405b/Interactive/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:08,041 submission_checker.py:1678 INFO] Target latency: 60000000000, Early Stopping Latency: 0, Scenario: Server
+[2025-08-01 12:19:08,050 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from open/NVIDIA/results/Jetson-Thor_TRT/llama3.1-8b-edge/SingleStream/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:08,060 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from open/NVIDIA/results/Jetson-Thor_TRT/llama3.1-8b-edge/SingleStream/accuracy/mlperf_log_detail.txt.
+[2025-08-01 12:19:08,076 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from open/NVIDIA/results/Jetson-Thor_TRT/llama3.1-8b-edge/SingleStream/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:08,077 log_parser.py:59 INFO] Sucessfully loaded MLPerf log from open/NVIDIA/results/Jetson-Thor_TRT/llama3.1-8b-edge/SingleStream/performance/run_1/mlperf_log_detail.txt.
+[2025-08-01 12:19:08,078 submission_checker.py:3393 INFO] ---
+[2025-08-01 12:19:08,078 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/deepseek-r1/Offline 33379.0
+[2025-08-01 12:19:08,078 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/deepseek-r1/Server 18592.2
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Interactive 59545.4
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Offline 101527.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99.9/Server 99123.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Interactive 59545.4
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Offline 101527.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama2-70b-99/Server 99123.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Interactive 751.366
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Offline 1624.11
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-405b/Server 1240.42
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Interactive 102903.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Offline 136752.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/llama3.1-8b/Server 128541.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/rgat/Offline 651230.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Offline 31.7754
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/stable-diffusion-xl/Server 28.4631
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/B200-SXM-180GBx8_TRT/whisper/Offline 45333.4
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Interactive 29745.6
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Offline 51736.9
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99.9/Server 49359.6
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Interactive 29745.6
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Offline 51736.9
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x4_TRT/llama2-70b-99/Server 49359.6
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Offline 289712.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/deepseek-r1/Server 167578.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Interactive 9921.02
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Offline 14774.3
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_TRT/llama3.1-405b/Server 11614.3
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/deepseek-r1/Offline 420659.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/deepseek-r1/Server 209328.0
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/llama3.1-405b/Offline 16104.1
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results closed/NVIDIA/results/GB300-NVL72_GB300-288GB_aarch64x72_TRT/llama3.1-405b/Server 12248.4
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results open/NVIDIA/results/GB200-NVL72_GB200-186GB_aarch64x72_Dynamo/llama3.1-405b/Interactive 9897.52
+[2025-08-01 12:19:08,079 submission_checker.py:3397 INFO] Results open/NVIDIA/results/Jetson-Thor_TRT/llama3.1-8b-edge/SingleStream 1397.965104
+[2025-08-01 12:19:08,079 submission_checker.py:3399 INFO] ---
+[2025-08-01 12:19:08,079 submission_checker.py:3488 INFO] ---
+[2025-08-01 12:19:08,079 submission_checker.py:3489 INFO] Results=35, NoResults=0, Power Results=0
+[2025-08-01 12:19:08,079 submission_checker.py:3496 INFO] ---
+[2025-08-01 12:19:08,079 submission_checker.py:3497 INFO] Closed Results=33, Closed Power Results=0
+
+[2025-08-01 12:19:08,079 submission_checker.py:3502 INFO] Open Results=2, Open Power Results=0
+
+[2025-08-01 12:19:08,079 submission_checker.py:3507 INFO] Network Results=0, Network Power Results=0
+
+[2025-08-01 12:19:08,079 submission_checker.py:3512 INFO] ---
+[2025-08-01 12:19:08,079 submission_checker.py:3514 INFO] Systems=6, Power Systems=0
+[2025-08-01 12:19:08,079 submission_checker.py:3518 INFO] Closed Systems=4, Closed Power Systems=0
+[2025-08-01 12:19:08,079 submission_checker.py:3523 INFO] Open Systems=2, Open Power Systems=0
+[2025-08-01 12:19:08,079 submission_checker.py:3528 INFO] Network Systems=0, Network Power Systems=0
+[2025-08-01 12:19:08,079 submission_checker.py:3533 INFO] ---
+[2025-08-01 12:19:08,079 submission_checker.py:3538 INFO] SUMMARY: submission looks OK

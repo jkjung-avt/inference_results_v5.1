@@ -16,6 +16,7 @@ Then logout and re-login as "franklin", and run prebuild to build and enter the 
 
    ```bash
    export MLPERF_SCRATCH_PATH=/hps/franklin/mlperf_scratch
+   mkdir -p ${MLPERF_SCRATCH_PATH}
    cd ${HOME}/inference_results_v5.1/closed/Inventec
    make prebuild
    ```
@@ -52,6 +53,8 @@ Enter the mlperf container for the rest of the steps.
 
    ```bash
    cd ${HOME}/inference_results_v5.1/closed/Inventec
+   ln -sf ${MLPERF_SCRATCH_PATH}/data build/
+   ln -sf ${MLPERF_SCRATCH_PATH}/model build/
    make prebuild
    ```
 

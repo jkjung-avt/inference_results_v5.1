@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.swp
+
+.llm_x86_64/
+build/

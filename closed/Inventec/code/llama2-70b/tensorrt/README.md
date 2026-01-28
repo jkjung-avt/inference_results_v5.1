@@ -1,65 +1,84 @@
-# Llama2
+# Llama2 70b
 
 ## Getting started
 
-Please first download the data, model and preprocess the data folloing the steps below _within the mlperf container_. Note that if you have already downloaded the model and data prior to v4.1, you don't need to redo them. But you _need to re-run_ the preprocess_data step for the updated calibration data.
+Please first download the data, model and preprocess the data by following the steps below _within the mlperf container_.  Note that if you have already downloaded the model and data prior to v4.1, you don't need to redo them.  But you _need to re-run_ the preprocess_data step for the updated calibration data.
+
+### Prepare and enter the mlperf container
+
+Note that the mlperf inference needs to be run by a non-root user, say, "franklin".  You first need to make sure the user have access to docker.  This could be done by running the following command as root (replace "franklin" with your own account name).
+
+   ```bash
+   usermod -aG docker franklin
+   ```
+
+Then logout and re-login as "franklin", and run prebuild to build and enter the mlperf container.
+
+   ```bash
+   export MLPERF_SCRATCH_PATH=/hps/franklin/mlperf_scratch
+   cd ${HOME}/inference_results_v5.1/closed/Inventec
+   make prebuild
+   ```
+
+This takes a long time (~2 hours) for the first time...  You should be inside the mlperf container when it finishes.
 
 ### Download Model
 
-Please download model files by following the mlcommons README.md with instructions:
+The instruction for downloading the llama2 70b model could be found at [Download model through MLCFlow Automation](https://github.com/mlcommons/inference/blob/master/language/llama2-70b/README.md#download-model-through-mlcflow-automation).  Note the downloading would require a MLCommons Member associated account.
 
-```bash
-# following steps: https://github.com/mlcommons/inference/blob/master/language/llama2-70b/README.md#get-dataset
-```
+For Inventec AI Lab, the model has been downloaded and stored at `/hps/data/mlperf_inference/llama2/llama-2-70b-chat-hf.uri/`.  To copy the model for benchmarking, exit the container and do the following:
+
+
+   ```bash
+   mkdir -p ${MLPERF_SCRATCH_PATH}/models/Llama2
+   cp -r /hps/data/mlperf_inference/llama2/llama-2-70b-chat-hf.uri ${MLPERF_SCRATCH_PATH}/models/Llama2/Llama-2-70b-chat-hf
+   ```
 
 ### Download and Prepare Data
 
-Please download data files by following the mlcommons README.md with instructions.
-Please move the downloaded pickle into expected path and follow steps to run the required data pre-processing:
+The instruction for downloading the dataset could be found at [Preprocessed](https://github.com/mlcommons/inference/blob/master/language/llama2-70b/README.md#preprocessed).
 
-```bash
-# follow: https://github.com/mlcommons/inference/blob/master/language/llama2-70b/README.md#get-dataset
-# to download file: open_orca_gpt4_tokenized_llama.sampled_24576.pkl.gz, open_orca_gpt4_tokenized_llama.calibration_1000.pkl.gz
+   ```bash
+   mkdir -p ${MLPERF_SCRATCH_PATH}/data
+   cd ${MLPERF_SCRATCH_PATH}/data
+   bash <(curl -s https://raw.githubusercontent.com/mlcommons/r2-downloader/refs/heads/main/mlc-r2-downloader.sh) https://inference.mlcommons-storage.org/metadata/llama-2-70b-open-orca-dataset.uri
+   mv open_orca llama2-70b
+   cd llama2-70b
+   gzip -dk open_orca_gpt4_tokenized_llama.sampled_24576.pkl.gz
+   gzip -dk open_orca_gpt4_tokenized_llama.calibration_1000.pkl.gz
+   ```
 
-# unzip files
-gzip -dk open_orca_gpt4_tokenized_llama.sampled_24576.pkl.gz
-gzip -dk open_orca_gpt4_tokenized_llama.calibration_1000.pkl.gz
+Enter the mlperf container for the rest of the steps.
 
-# make sure you are in mlperf's container
-make prebuild
+   ```bash
+   cd ${HOME}/inference_results_v5.1/closed/Inventec
+   make prebuild
+   ```
 
-# move into right directory
-mv open_orca_gpt4_tokenized_llama.*.pkl build/data/llama2-70b/
+Run the required data pre-processing:
 
-# run pre-process step for llama2
-python3 code/llama2-70b/tensorrt/preprocess_data.py --data_dir build/data/ --preprocessed_data_dir build/preprocessed-data
-```
+   ```bash
+   python3 code/llama2-70b/tensorrt/preprocess_data.py --data_dir build/data/ --preprocessed_data_dir build/preprocessed_data
+   ```
 
-Make sure after the 2 steps above, you have:
+Make sure after the steps above, you have:
 
 1. model downloaded at: `build/models/Llama2/Llama-2-70b-chat-hf/`,
 2. preprocessed data at `build/preprocessed_data/llama2-70b/`:
-
-- `build/preprocessed_data/llama2-70b/input_lens.npy`
-- `build/preprocessed_data/llama2-70b/input_ids_padded.npy`
-- `build/preprocessed_data/llama2-70b/mlperf_llama2_openorca_calibration_1k/data.parquet`
+   - `build/preprocessed_data/llama2-70b/input_lens.npy`
+   - `build/preprocessed_data/llama2-70b/input_ids_padded.npy`
+   - `build/preprocessed_data/llama2-70b/mlperf_llama2_openorca_calibration_1k/data.parquet`
 
 ## Build and run the benchmarks
 
-Please follow the steps below in MLPerf container. Note that the quantization is done in the generate_engines step, so you don't need to do it separately.
+Please follow the steps below in the mlperf container.  Note that the quantization is done in the generate_engines step, so you don't need to do it separately.
 
-```bash
-# make sure you are in mlperf's container
-make prebuild
-# if not, make sure you already built TRTLLM as well as mlperf harnesses needed for GPTJ run.
-make build
-# If the latest TRTLLM is already built in the steps above, you can expedite the build. You don't need to run make build if loadgen, TRTLLM, and harnesses are already built on the latest commit.
-SKIP_TRTLLM_BUILD=1 make build
+   ```bash
+   make build
 
-# Please update configs/llama2-70b to include your custom machine config before building the engine
-make generate_engines RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy"
-make run_harness RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy --test_mode=AccuracyOnly"
-```
+   make generate_engines SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy"
+   make run_harness SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy --test_mode=AccuracyOnly"
+   ```
 
 For a general rule of thumb, GPUs with:
 
@@ -69,6 +88,12 @@ For a general rule of thumb, GPUs with:
 
 You should expect to get the following results (the detailed number might be different):
 
-```
-   accuracy: [PASSED] ROUGE1: 44.495 (Threshold=43.836) | [PASSED] ROUGE2: 22.089 (Threshold=21.689) | [PASSED] ROUGEL: 28.694 (Threshold=28.222) | [PASSED] TOKENS_PER_SAMPLE: 293.100 (Threshold=263.970)
-```
+   ```
+      accuracy: [PASSED] ROUGE1: 44.495 (Threshold=43.836) | [PASSED] ROUGE2: 22.089 (Threshold=21.689) | [PASSED] ROUGEL: 28.694 (Threshold=28.222) | [PASSED] TOKENS_PER_SAMPLE: 293.100 (Threshold=263.970)
+   ```
+
+Finally, run the following command to get the benchmark number.
+
+   ```bash
+   make run_harness SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy" 
+   ```

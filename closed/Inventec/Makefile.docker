@@ -135,6 +135,8 @@ else ifeq ($(PARTNER_DROP), 1)
     CONTAINER_REGISTRY := nvcr.io/yrleydyexu3y/mlpinf-partner-$(subst .,,$(VERSION))/mlpinf-partner-$(subst .,,$(VERSION))
 else ifeq ($(SUBMITTER), NVIDIA)
     CONTAINER_REGISTRY := nvcr.io/nvidia/mlperf/mlperf-inference
+else ifeq ($(SUBMITTER), Inventec)
+    CONTAINER_REGISTRY := nvcr.io/nvidia/mlperf/mlperf-inference
 endif
 
 

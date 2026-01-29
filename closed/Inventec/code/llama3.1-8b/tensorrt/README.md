@@ -2,66 +2,113 @@
 
 ## Getting started
 
+### Prepare and enter the mlperf container
+
+Note that the mlperf inference needs to be run by a non-root user, say, "franklin".  You first need to make sure the user have access to docker.  This could be done by running the following command as root (replace "franklin" with your own account name).
+
+   ```bash
+   usermod -aG docker franklin
+   ```
+
+Then logout and re-login as "franklin", and run prebuild to build and enter the mlperf container.
+
+   ```bash
+   export MLPERF_SCRATCH_PATH=/hps/franklin/mlperf_scratch
+   mkdir -p ${MLPERF_SCRATCH_PATH}/models ${MLPERF_SCRATCH_PATH}/data ${MLPERF_SCRATCH_PATH}/preprocessed_data
+   cd ${HOME}/inference_results_v5.1/closed/Inventec
+   make prebuild
+   ```
+
+This takes a long time (~2 hours) for the first time...  You should be inside the mlperf container when it finishes.  Then do the following within the mlperf container, which links the build/ directory to the scratch space.
+
+   ```bash
+   make link_dirs
+   ls -al build/
+   ```
+
+You should see an output similar to the following.  (There might be other files in the build/ directory if you have previously built some code within the container.)
+
+   ```
+   total 4
+   drwxrwxr-x  2 user group 4096 Jun 24 18:49 .
+   drwxrwxr-x 15 user group 4096 Jun 24 18:49 ..
+   lrwxrwxrwx  1 user group   35 Jun 24 18:49 data -> $MLPERF_SCRATCH_PATH/data
+   lrwxrwxrwx  1 user group   37 Jun 24 18:49 models -> $MLPERF_SCRATCH_PATH/models
+   lrwxrwxrwx  1 user group   48 Jun 24 18:49 preprocessed_data -> $MLPERF_SCRATCH_PATH/preprocessed_data
+   ```
+
 ### Download Model
 
-Please download model files by following the mlcommons README.md with instructions:
+The instruction for downloading the llama3.1 8b model could be found at [MLCommons Members Download (Recommended for official submission)](https://github.com/mlcommons/inference/tree/master/language/llama3.1-8b#mlcommons-members-download-recommended-for-official-submission).  Note the downloading would require a MLCommons Member associated account.
 
-```bash
-# following steps: https://github.com/mlcommons/inference/tree/master/language/llama3.1-8b#get-model
-# If your company has license concern, please download the model from the following link: https://llama3-1.mlcommons.org/
-export CHECKPOINT_PATH=build/models/Llama3.1-8B/Meta-Llama-3.1-8B-Instruct
-git lfs install
-git clone https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct ${CHECKPOINT_PATH}
-cd ${CHECKPOINT_PATH} && git checkout 0e9e39f249a16976918f6564b8830bc894c89659
-```
+For Inventec AI Lab, the model has been downloaded and stored at `/hps/data/mlperf_inference/llama31/llama3-1-8b-instruct.uri/`.  To copy the model for benchmarking, _exit the container_ and do the following:
 
-Please untar the quantized checkpoint packaged with the container:
+   ```bash
+   mkdir -p ${MLPERF_SCRATCH_PATH}/models/Llama3.1-8B
+   cp -r /hps/data/mlperf_inference/llama31/llama3-1-8b-instruct.uri ${MLPERF_SCRATCH_PATH}/models/Llama3.1-8B/Meta-Llama-3.1-8B-Instruct
+   ```
 
-```bash
-tar -xzf /opt/fp4-quantized-modelopt/llama3_1-8b-instruct-hf-torch-fp4.tar.gz -C $(BUILD_DIR)/models/Llama3.1-8B/fp4-quantized-modelopt/
-```
+_Enter the mlperf container_ again for the rest of the steps.
+
+   ```bash
+   cd ${HOME}/inference_results_v5.1/closed/Inventec
+   make prebuild
+   ```
+
+Untar the quantized checkpoint packaged within the container:
+
+   ```bash
+   mkdir -p build/models/Llama3.1-8B/fp4-quantized-modelopt
+   tar -xzf /opt/fp4-quantized-modelopt/llama3_1-8b-instruct-hf-torch-fp4.tar.gz -C build/models/Llama3.1-8B/fp4-quantized-modelopt/
+   ```
 
 ### Download and Prepare Data
 
-Please download data files by following the mlcommons README.md with instructions.
-Please move the downloaded json into expected path and follow steps to run the required data pre-processing:
+The instruction for downloading the dataset could be found at [Full dataset (datacenter)](https://github.com/mlcommons/inference/tree/master/language/llama3.1-8b#full-dataset-datacenter) and [Calibration](https://github.com/mlcommons/inference/tree/master/language/llama3.1-8b#calibration).
 
-```bash
-# follow: https://github.com/mlcommons/inference/tree/master/language/llama3.1-8b#get-dataset
-# to download file: cnn_eval.json, cnn_dailymail_calibration.json
+Do the following within the container to download and preprocess the data.
 
-# make sure you are in mlperf's container
-make prebuild
+   ```bash
+   mkdir -p build/data/llama3.1-8b
+   bash <(curl -s https://raw.githubusercontent.com/mlcommons/r2-downloader/refs/heads/main/mlc-r2-downloader.sh) \
+     -d build/data/llama3.1-8b https://inference.mlcommons-storage.org/metadata/llama3-1-8b-sample-cnn-eval-5000.uri
+   bash <(curl -s https://raw.githubusercontent.com/mlcommons/r2-downloader/refs/heads/main/mlc-r2-downloader.sh) \
+     -d build/data/llama3.1-8b https://inference.mlcommons-storage.org/metadata/llama3-1-8b-cnn-dailymail-calibration.uri
+   mv build/data/llama3.1-8b/sample_cnn_eval_5000.json build/data/llama3.1-8b/cnn_eval.json
+   
+   python3 code/llama3.1-8b/tensorrt/preprocess_data.py --data_dir build/data/ --preprocessed_data_dir build/preprocessed_data
+   ```
 
-# move into right directory
-mv cnn_eval.json build/data/llama3.1-8b/cnn_eval.json
-mv cnn_dailymail_calibration.json build/data/llama3.1-8b/cnn_dailymail_calibration.json
-
-# run pre-process step for llama3
-python3 code/llama3_1-8b/tensorrt/preprocess_data.py --data_dir build/data/ --preprocessed_data_dir build/preprocessed-data
-```
-
-Make sure after the 2 steps above, you have:
+Make sure after the steps above, you have:
 
 1. model downloaded at: `build/models/Llama3.1-8B/Meta-Llama-3.1-8B-Instruct/`
 2. preprocessed data at `build/preprocessed_data/llama3.1-8b/`:
+   - `build/preprocessed_data/llama3.1-8b/input_lens.npy`
+   - `build/preprocessed_data/llama3.1-8b/input_ids_padded.npy`
+   - `build/preprocessed_data/llama3.1-8b/mlperf_llama3.1-8b_calibration_1k/data.parquet`
 
-- `build/preprocessed_data/llama3.1-8b/input_lens.npy`
-- `build/preprocessed_data/llama3.1-8b/input_ids_padded.npy`
-- `build/preprocessed_data/llama3.1-8b/mlperf_llama3.1-8b_calibration_1k/data.parquet`
+## Login Hugging Face
+
+The benchmark code requires you to be logged in (authed) in Hugging Face and granted access to "meta-llama/Meta-Llama-3-8B-Instruct".  So, go to [https://huggingface.co/meta-llama/Meta-Llama-3-8B](https://huggingface.co/meta-llama/Meta-Llama-3-8B) and request access with your registered account.  Once access is granted, install Hugging Face CLI and log in with your own token (represented as $HF_TOKEN below).
+
+   ```bash
+   curl -LsSf https://hf.co/cli/install.sh | bash
+   hf auth login --token $HF_TOKEN
+   ```
 
 ## Build and run the benchmarks
 
-Please follow the steps below in MLPerf container. Note that the quantization is done in the generate_engines step, so you don't need to do it separately.
+Please follow the steps below in the mlperf container.
 
-```bash
-# make sure you are in mlperf's container
-make prebuild
-# if not, make sure you already built TRTLLM as well as mlperf harnesses are needed.
-make build
+   ```bash
+   make build
 
-# Please update configs/llama3_1-8b to include your custom machine config before building the engine
-make run_llm_server RUN_ARGS="--core_type=trtllm_endpoint --benchmarks=llama3.1-8b --scenarios=Offline"
-# Wait for few minutes for server to spin up, see logs
-make run_harness RUN_ARGS="--core_type=trtllm_endpoint --benchmarks=llama3.1-8b --scenarios=Offline"
-```
+   make run_llm_server RUN_ARGS="--core_type=trtllm_endpoint --benchmarks=llama3.1-8b --scenarios=Offline"
+   ```
+
+Wait for a few seconds for the server to spin up (see logs), then:
+
+   ```bash
+   make run_harness RUN_ARGS="--core_type=trtllm_endpoint --benchmarks=llama3.1-8b --scenarios=Offline --config_ver=high_accuracy"
+   make run_harness RUN_ARGS="--core_type=trtllm_endpoint --benchmarks=llama3.1-8b --scenarios=Offline"
+   ```

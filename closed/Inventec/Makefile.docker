@@ -126,7 +126,8 @@ SSH_AGENT_CMD = eval $$(ssh-agent -s) && ssh-add /home/${USER}/.ssh/* 2>/dev/nul
 
 extra_docker_flags := --ssh default
 
-BASE_IMAGE_NAME ?= mlpinf-$(VERSION)-cuda$(CUDA_VER)-${BASE_IMAGE_ALIAS}-ubuntu$(UBUNTU_VERSION)-$(BUILD_CONTEXT)
+#BASE_IMAGE_NAME ?= mlpinf-$(VERSION)-cuda$(CUDA_VER)-${BASE_IMAGE_ALIAS}-ubuntu$(UBUNTU_VERSION)-$(BUILD_CONTEXT)
+BASE_IMAGE_NAME ?= mlpinf-v5.1-cuda$(CUDA_VER)-${BASE_IMAGE_ALIAS}-ubuntu$(UBUNTU_VERSION)-$(BUILD_CONTEXT)
 ifeq ($(INSTALL_RGAT_DEPS), 1)
     BASE_IMAGE_NAME = mlpinf-v5.0-cuda12.8-pytorch25.01-ubuntu24.04-x86_64-release
     CONTAINER_REGISTRY := nvcr.io/nvidia/mlperf/mlperf-inference

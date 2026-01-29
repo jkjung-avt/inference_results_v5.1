@@ -107,6 +107,15 @@ def add_systems(name_format_string: str,
         target_dict[k] = v
 
 
+# Inventec P9000AG7 Systems
+add_systems("P9000AG&_B200_SXM_180GBx{}",
+            "P9000AG7_B200-SXM-180GBx{}",
+            KnownCPU.x86_64_AMD_Generic,
+            KnownGPU.B200_SXM_180GB,
+            [8, ],
+            Memory(100, ByteSuffix.GiB),
+            tags=["start_from_device_enabled"])
+
 # Blackwell Systems
 add_systems("B200_SXM_180GBx{}",
             "B200-SXM-180GBx{}",

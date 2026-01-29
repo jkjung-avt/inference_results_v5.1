@@ -21,13 +21,29 @@ Then logout and re-login as "franklin", and run prebuild to build and enter the 
    make prebuild
    ```
 
-This takes a long time (~2 hours) for the first time...  You should be inside the mlperf container when it finishes.
+This takes a long time (~2 hours) for the first time...  You should be inside the mlperf container when it finishes.  Then do the following within the mlperf container, which links the build/ directory to the scratch space.
+
+   ```bash
+   make link_dirs
+   ls -al build/
+   ```
+
+You should see an output similar to the following.  (There might be other files in the build/ directory if you have previously built some code within the container.)
+
+   ```
+   total 8
+   drwxrwxr-x  2 user group 4096 Jun 24 18:49 .
+   drwxrwxr-x 15 user group 4096 Jun 24 18:49 ..
+   lrwxrwxrwx  1 user group   35 Jun 24 18:49 data -> $MLPERF_SCRATCH_PATH/data
+   lrwxrwxrwx  1 user group   37 Jun 24 18:49 models -> $MLPERF_SCRATCH_PATH/models
+   lrwxrwxrwx  1 user group   48 Jun 24 18:49 preprocessed_data -> $MLPERF_SCRATCH_PATH/preprocessed_data
+   ```
 
 ### Download Model
 
 The instruction for downloading the llama2 70b model could be found at [Download model through MLCFlow Automation](https://github.com/mlcommons/inference/blob/master/language/llama2-70b/README.md#download-model-through-mlcflow-automation).  Note the downloading would require a MLCommons Member associated account.
 
-For Inventec AI Lab, the model has been downloaded and stored at `/hps/data/mlperf_inference/llama2/llama-2-70b-chat-hf.uri/`.  To copy the model for benchmarking, exit the container and do the following:
+For Inventec AI Lab, the model has been downloaded and stored at `/hps/data/mlperf_inference/llama2/llama-2-70b-chat-hf.uri/`.  To copy the model for benchmarking, _exit the container_ and do the following:
 
 
    ```bash
@@ -52,9 +68,6 @@ Enter the mlperf container for the rest of the steps.
 
    ```bash
    cd ${HOME}/inference_results_v5.1/closed/Inventec
-   ln -sf ${MLPERF_SCRATCH_PATH}/models build/
-   ln -sf ${MLPERF_SCRATCH_PATH}/data build/
-   ln -sf ${MLPERF_SCRATCH_PATH}/preprocessed_data build/
    make prebuild
    ```
 

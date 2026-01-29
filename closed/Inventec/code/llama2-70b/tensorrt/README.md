@@ -16,7 +16,7 @@ Then logout and re-login as "franklin", and run prebuild to build and enter the 
 
    ```bash
    export MLPERF_SCRATCH_PATH=/hps/franklin/mlperf_scratch
-   mkdir -p ${MLPERF_SCRATCH_PATH}
+   mkdir -p ${MLPERF_SCRATCH_PATH}/models ${MLPERF_SCRATCH_PATH}/data ${MLPERF_SCRATCH_PATH}/preprocessed_data
    cd ${HOME}/inference_results_v5.1/closed/Inventec
    make prebuild
    ```
@@ -40,7 +40,6 @@ For Inventec AI Lab, the model has been downloaded and stored at `/hps/data/mlpe
 The instruction for downloading the dataset could be found at [Preprocessed](https://github.com/mlcommons/inference/blob/master/language/llama2-70b/README.md#preprocessed).
 
    ```bash
-   mkdir -p ${MLPERF_SCRATCH_PATH}/data
    cd ${MLPERF_SCRATCH_PATH}/data
    bash <(curl -s https://raw.githubusercontent.com/mlcommons/r2-downloader/refs/heads/main/mlc-r2-downloader.sh) https://inference.mlcommons-storage.org/metadata/llama-2-70b-open-orca-dataset.uri
    mv open_orca llama2-70b
@@ -53,17 +52,18 @@ Enter the mlperf container for the rest of the steps.
 
    ```bash
    cd ${HOME}/inference_results_v5.1/closed/Inventec
-   ln -sf ${MLPERF_SCRATCH_PATH}/data build/
    ln -sf ${MLPERF_SCRATCH_PATH}/models build/
+   ln -sf ${MLPERF_SCRATCH_PATH}/data build/
+   ln -sf ${MLPERF_SCRATCH_PATH}/preprocessed_data build/
    make prebuild
    ```
 
 Run the required data pre-processing:
 
    ```bash
-   python3 code/llama2-70b/tensorrt/preprocess_data.py --data_dir build/data/ --preprocessed_data_dir build/preprocessed_data
    mkdir -p build/preprocessed_data/open_orca/
    cp build/data/llama2-70b/open_orca_gpt4_tokenized_llama.sampled_24576.pkl build/preprocessed_data/open_orca/
+   python3 code/llama2-70b/tensorrt/preprocess_data.py --data_dir build/data/ --preprocessed_data_dir build/preprocessed_data
    ```
 
 Make sure after the steps above, you have:

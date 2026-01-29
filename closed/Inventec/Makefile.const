@@ -16,7 +16,7 @@ ifndef MAKEFILE_CONST_INCLUDED
 MAKEFILE_CONST_INCLUDED := 1
 
 # Change to name of submitter. Used as the closed/[submitter] and open/[submitter] directory names.
-SUBMITTER ?= NVIDIA
+SUBMITTER ?= Inventec
 ENV ?= dev
 
 # Project constants

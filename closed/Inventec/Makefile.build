@@ -34,7 +34,9 @@ INFERENCE_URL = https://github.com/mlcommons/inference.git
 LOADGEN_INCLUDE_DIR ?= $(INFERENCE_DIR)/loadgen
 LOADGEN_LIB_DIR ?= $(LOADGEN_INCLUDE_DIR)/build
 # Loadgen hash: 7/31/2025 (Only check for token latency requirements for server scenario)
-INFERENCE_HASH = 47b91b979caeea4fbd7e91a4d919a6367fd45eed
+# INFERENCE_HASH = 47b91b979caeea4fbd7e91a4d919a6367fd45eed
+# Loadgen hash: 1/29/2026 (Only check for token latency requirements for server scenario)
+INFERENCE_HASH = a4e012ae18744025ecf4f532ae7d8c522a3bcbc9
 
 # Set Environment variables to extracted contents
 export LD_LIBRARY_PATH := $(LD_LIBRARY_PATH):/usr/local/cuda/lib64:/usr/lib/$(ARCH)-linux-gnu:$(LOADGEN_LIB_DIR)

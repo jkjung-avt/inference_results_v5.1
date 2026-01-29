@@ -31,7 +31,7 @@ This takes a long time (~2 hours) for the first time...  You should be inside th
 You should see an output similar to the following.  (There might be other files in the build/ directory if you have previously built some code within the container.)
 
    ```
-   total 8
+   total 4
    drwxrwxr-x  2 user group 4096 Jun 24 18:49 .
    drwxrwxr-x 15 user group 4096 Jun 24 18:49 ..
    lrwxrwxrwx  1 user group   35 Jun 24 18:49 data -> $MLPERF_SCRATCH_PATH/data
@@ -103,7 +103,7 @@ For a general rule of thumb, GPUs with:
 
 - ~40GB of VMEM needs tensor parallelism of 4
 - ~80GB of VMEM needs tensor parallelism of 2
-- > 90GB of VMEM can run tensor parallelism of 1.
+- more than 90GB of VMEM can run tensor parallelism of 1
 
 You should expect to get the following results (the detailed number might be different):
 

@@ -71,10 +71,9 @@ Do the following within the container to download and preprocess the data.
    ```bash
    mkdir -p build/data/llama3.1-8b
    bash <(curl -s https://raw.githubusercontent.com/mlcommons/r2-downloader/refs/heads/main/mlc-r2-downloader.sh) \
-     -d build/data/llama3.1-8b https://inference.mlcommons-storage.org/metadata/llama3-1-8b-sample-cnn-eval-5000.uri
+     -d build/data/llama3.1-8b https://inference.mlcommons-storage.org/metadata/llama3-1-8b-cnn-eval.uri
    bash <(curl -s https://raw.githubusercontent.com/mlcommons/r2-downloader/refs/heads/main/mlc-r2-downloader.sh) \
      -d build/data/llama3.1-8b https://inference.mlcommons-storage.org/metadata/llama3-1-8b-cnn-dailymail-calibration.uri
-   mv build/data/llama3.1-8b/sample_cnn_eval_5000.json build/data/llama3.1-8b/cnn_eval.json
    
    python3 code/llama3.1-8b/tensorrt/preprocess_data.py --data_dir build/data/ --preprocessed_data_dir build/preprocessed_data
    ```

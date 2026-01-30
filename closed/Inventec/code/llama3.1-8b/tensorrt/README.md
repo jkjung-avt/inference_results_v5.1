@@ -102,13 +102,22 @@ Please follow the steps below in the mlperf container.
 
    ```bash
    make build
+   ```
 
+Start the llm server.  Wait for a few seconds for the server to spin up (see logs).
+
+   ```bash
    make run_llm_server RUN_ARGS="--core_type=trtllm_endpoint --benchmarks=llama3.1-8b --scenarios=Offline"
    ```
 
-Wait for a few seconds for the server to spin up (see logs), then:
+Validate accuracy of the optimized llama3.1-8b model.
 
    ```bash
-   make run_harness RUN_ARGS="--core_type=trtllm_endpoint --benchmarks=llama3.1-8b --scenarios=Offline --config_ver=high_accuracy"
+   make run_harness RUN_ARGS="--core_type=trtllm_endpoint --benchmarks=llama3.1-8b --scenarios=Offline --test_mode=AccuracyOnly"
+   ```
+
+Run the benchmark.
+
+   ```bash
    make run_harness RUN_ARGS="--core_type=trtllm_endpoint --benchmarks=llama3.1-8b --scenarios=Offline"
    ```

@@ -353,7 +353,7 @@ class StageResultsRunner:
                  staging_dir: os.PathLike = "build/submission-staging",
                  dry_run: bool = False,
                  division: str = "closed",
-                 submitter: str = "NVIDIA"):
+                 submitter: str = "Inventec"):
         self.staging_dir = staging_dir
         self.dry_run = dry_run
         self.division = division

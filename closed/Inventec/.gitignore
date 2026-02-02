@@ -5,4 +5,5 @@ __pycache__/
 *.swp
 
 .llm_x86_64/
+venv/
 build/

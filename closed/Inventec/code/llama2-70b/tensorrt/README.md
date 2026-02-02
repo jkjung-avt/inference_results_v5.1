@@ -89,21 +89,23 @@ Make sure after the steps above, you have:
 
 ## Build and run the benchmarks
 
-Please follow the steps below in the mlperf container.  The build step would build code for all mlperf inference tasks, including code for other benchmarks.  The generate_engines step would take care of quantization/calibration of the model.  And the run_harness step would validate the optimized model could achieve the required accuracy threshold.
+Please follow the steps below in the mlperf container.  The build step would build code for all mlperf inference tasks, including code for other benchmarks.  If you are not running this benchmark for the first time and you did not make any modifications to the code since last `make build`, it suffices to just run `make build_loadgen` to save time.
 
    ```bash
    make build
-
-   make generate_engines SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy"
-
-   make run_harness SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy --test_mode=AccuracyOnly"
    ```
 
-For a general rule of thumb, GPUs with:
+Next, do `generate_engines` which would take care of quantization/calibration of the model.
 
-- ~40GB of VMEM needs tensor parallelism of 4
-- ~80GB of VMEM needs tensor parallelism of 2
-- more than 90GB of VMEM can run tensor parallelism of 1
+   ```bash
+   make generate_engines SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy"
+   ```
+
+Then, do `run_harness` to validate the optimized model could achieve the required accuracy threshold.
+
+   ```bash
+   make run_harness RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy --test_mode=AccuracyOnly"
+   ```
 
 You should expect to get the following results (the detailed number might be different):
 
@@ -128,5 +130,5 @@ You should expect to get the following results (the detailed number might be dif
 Finally, run the following command to get the benchmark number.
 
    ```bash
-   make run_harness SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy" 
+   make run_harness RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy" 
    ```

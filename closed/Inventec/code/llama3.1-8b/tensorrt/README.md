@@ -97,7 +97,7 @@ The benchmark code requires you to be logged in (authed) in Hugging Face and gra
 
 ## Build and run the benchmarks
 
-Please follow the steps below in the mlperf container.
+Please follow the steps below in the mlperf container.  The build step would build code for all mlperf inference tasks, including code for other benchmarks.  If you are not running this benchmark for the first time and you did not make any modifications to the code since last `make build`, it suffices to just run `make build_loadgen` to save time.
 
    ```bash
    make build
@@ -120,3 +120,5 @@ Run the benchmark.
    ```bash
    make run_harness RUN_ARGS="--core_type=trtllm_endpoint --benchmarks=llama3.1-8b --scenarios=Offline"
    ```
+
+Based on [NVIDIA's recommendation](https://github.com/jkjung-avt/inference_results_v5.1/tree/main/closed/Inventec#do-i-need-to-restart-llm-server-each-time-before-running-benchmarks), it's better to exit and re-enter the mlperf container, and then restart the server for each performance run.  This ensures GPU is in a clean state with no residual memory from past runs.  It is okay to re-use server for accuracy/audit runs after performance runs.

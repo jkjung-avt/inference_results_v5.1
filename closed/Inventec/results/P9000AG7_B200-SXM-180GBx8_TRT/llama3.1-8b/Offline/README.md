@@ -10,10 +10,15 @@ Note that the mlperf inference needs to be run by a non-root user, say, "frankli
    usermod -aG docker franklin
    ```
 
-Then logout and re-login as "franklin", and run prebuild to build and enter the mlperf container.
+Then logout and re-login as "franklin", and set the scratch path environment variable.  All downloaded models/data and preprocessed data would be stored at this scratch space.
 
    ```bash
    export MLPERF_SCRATCH_PATH=/hps/franklin/mlperf_scratch
+   ```
+
+Run the prebuild command to build and enter the mlperf container.
+
+   ```bash
    mkdir -p ${MLPERF_SCRATCH_PATH}/models ${MLPERF_SCRATCH_PATH}/data ${MLPERF_SCRATCH_PATH}/preprocessed_data
    cd ${HOME}/inference_results_v5.1/closed/Inventec
    make prebuild

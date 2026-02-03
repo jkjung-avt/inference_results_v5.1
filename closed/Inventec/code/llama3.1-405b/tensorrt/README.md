@@ -76,6 +76,7 @@ Do the following within the container to download and preprocess the data.
    python3 code/llama3_1-405b/tensorrt/preprocess_data.py --data_dir build/data/ --preprocessed_data_dir build/preprocessed_data
 
    mv build/preprocessed_data/llama3.1-405b/mlperf_llama3.1_405b_calibration_dataset_512_processed_fp16_eval build/preprocessed_data/llama3.1-405b/mlperf_llama3.1_405b_dataset_512_processed_fp16_calibration
+   cp build/data/llama3.1-405b/mlperf_llama3.1_405b_dataset_8313_processed_fp16_eval.pkl build/preprocessed_data/llama3.1-405b/
    ```
 
 Make sure after the steps above, you have:

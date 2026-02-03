@@ -73,7 +73,7 @@ The preprocess script requires a newer version of numpy.  So we create a python 
    ```bash
    python -m venv venv
    source venv/bin/activate  # enters the venv
-   pip install numpy==2.3.0 torch==2.7.0 datasets=3.6.0
+   pip install numpy==2.3.0 torch==2.7.0 datasets==3.6.0
    python3 code/deepseek-r1/tensorrt/preprocess_data.py --data_dir build/data/ --preprocessed_data_dir build/preprocessed_data
    deactivate  # exits the venv
    ```

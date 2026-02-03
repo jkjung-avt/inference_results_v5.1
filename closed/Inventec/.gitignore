@@ -7,3 +7,5 @@ __pycache__/
 .llm_x86_64/
 venv/
 build/
+
+code/whisper/tensorrt/utils/inference_librispeech.csv

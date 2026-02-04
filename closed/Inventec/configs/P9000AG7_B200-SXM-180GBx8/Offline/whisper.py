@@ -16,7 +16,7 @@ EXPORTS = {
         },
         model_fields.input_dtype: Precision.FP32,
         llm_fields.llm_gen_config_path: 'code/whisper/tensorrt/generation_config.json',
-        loadgen_fields.offline_expected_qps: 650,
+        loadgen_fields.offline_expected_qps: 670,
         model_fields.precision: Precision.FP16,
         harness_fields.tensor_path: 'build/preprocessed_data/whisper-large-v3/',
         llm_fields.tensor_parallelism: 1,

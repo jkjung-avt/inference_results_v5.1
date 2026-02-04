@@ -29,7 +29,7 @@ from nvmitten.utils import run_command
 
 from ..systems.system_list import DETECTED_SYSTEM
 from ..workload import Workload
-from .loadgen import submission_checker, model_config
+from .loadgen import submission_checker_constants, model_config
 
 from .. import constants as C
 from .. import paths
@@ -38,7 +38,7 @@ from ...fields import models as model_fields
 from ...fields import harness as harness_fields
 
 
-G_ACC_PATTERNS = submission_checker.ACC_PATTERN
+G_ACC_PATTERNS = submission_checker_constants.ACC_PATTERN
 G_ACC_TARGETS = model_config["accuracy-target"]
 G_ACC_UPPER_LIMIT = model_config["accuracy-upper-limit"]
 

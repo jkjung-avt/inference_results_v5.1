@@ -79,3 +79,4 @@ python ${INFERENCE_DIR}/tools/submission/submission_checker/main.py \
   --version $(cat VERSION) \
   --submitter ${SUBMITTER} 2>&1 | tee submission_checker_log.txt
 mv submission_checker_log.txt ${SUBMISSION_DIR}/${DIVISION}/${SUBMITTER}/
+mv summary.csv ${SUBMISSION_DIR}/${DIVISION}/${SUBMITTER}/

@@ -81,8 +81,7 @@ purge_artifacts_repo:
 .PHONY: stage_results
 stage_results:
 	@STAGING_DIR=$(ARTIFACTS_STAGING) $(PYTHON3_CMD) -m code.common.mlcommons.results
-	@mkdir -p $(ARTIFACTS_STAGING)/closed/$(SUBMITTER)/measurements
-	@cp -R $(BUILD_DIR)/loadgen-configs/* $(ARTIFACTS_STAGING)/closed/$(SUBMITTER)/measurements/
+	@bash scripts/stage_measurements.sh
 
 
 .PHONY: stage_compliance

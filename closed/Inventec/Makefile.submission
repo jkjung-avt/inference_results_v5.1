@@ -78,10 +78,11 @@ purge_artifacts_repo:
 
 
 # Generate a raw results directory in build/full_results from LoadGen logs in build/logs
-.PHONY: stage_results
-stage_results:
+.PHONY: refresh_submission
+refresh_submission:
+	rm -rf $(ARTIFACTS_STAGING)/*
 	@STAGING_DIR=$(ARTIFACTS_STAGING) $(PYTHON3_CMD) -m code.common.mlcommons.results
-	@bash scripts/stage_measurements.sh
+	@bash scripts/generate_submission.sh
 
 
 .PHONY: stage_compliance

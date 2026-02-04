@@ -40,13 +40,13 @@ from ...fields import harness as harness_fields
 from ...fields import loadgen as lg_fields
 from ...fields import models as model_fields
 
-submission_checker = import_from([paths.MLCOMMONS_INF_REPO / "tools" / "submission"] + sys.path, "submission_checker_old")
-_latest_ver = max(versioning.parse(ver_key) for ver_key in submission_checker.MODEL_CONFIG.keys())
+submission_checker_constants = import_from([paths.MLCOMMONS_INF_REPO / "tools" / "submission"] + sys.path, "submission_checker.constants")
+_latest_ver = max(versioning.parse(ver_key) for ver_key in submission_checker_constants.MODEL_CONFIG.keys())
 _vstr = f"v{_latest_ver}"
 if _vstr != C.VERSION:
     logging.warning("Current submission version is %s but latest version in submission checker is %s", C.VERSION, _vstr)
 
-model_config = submission_checker.MODEL_CONFIG[_vstr]
+model_config = submission_checker_constants.MODEL_CONFIG[_vstr]
 benchmark_qsl_size_map = model_config["performance-sample-count"].copy()
 
 if "resnet" in benchmark_qsl_size_map:
@@ -71,7 +71,7 @@ _min_queries = model_config["min-queries"].copy()
 # across benchmarks.
 QueryConstraint = namedtuple("QueryConstraint", ["name", "val"])
 QUERY_METRIC_CONSTRAINTS = {
-    C.Scenario.Offline: QueryConstraint("effective_samples_per_query", submission_checker.OFFLINE_MIN_SPQ),
+    C.Scenario.Offline: QueryConstraint("effective_samples_per_query", submission_checker_constants.OFFLINE_MIN_SPQ),
     C.Scenario.Server: QueryConstraint("effective_min_query_count", _min_queries["resnet"]["Server"]),
     # No min query count for Interactive.
     C.Scenario.Interactive: QueryConstraint("effective_min_query_count", _min_queries["resnet"]["Server"]),

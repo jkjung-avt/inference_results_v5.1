@@ -101,7 +101,7 @@ Please follow the steps below in the mlperf container.  The build step would bui
 Next, do `generate_engines` which would take care of quantization/calibration of the model.
 
    ```bash
-   make generate_engines RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy"
+   make generate_engines SYSTEM_NAME=P9000AG7_B200-SXM-180GBx8 RUN_ARGS="--benchmarks=llama2-70b --scenarios=Offline --config_ver=high_accuracy"
    ```
 
 Then, do `run_harness` to validate the optimized model could achieve the required accuracy threshold.
